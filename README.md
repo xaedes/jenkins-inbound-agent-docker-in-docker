@@ -9,3 +9,7 @@ Create three files containing the jenkins configuration without line break:
  - `url`: Contains the complete url to your Jenkins instance, e.g. https://jenkins.yourdomain.tld/
  - `agent_name`: Contains the name for the Jenkins agent, e.g. agent_smath
  
+Start the agent with `./start_agent.sh`.
+
+If you want to modify the Dockerfile, you can rebuild and start the container using `./build_agent.sh`.
+
