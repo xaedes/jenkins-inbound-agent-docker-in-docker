@@ -7,7 +7,7 @@ Create three files containing the jenkins configuration without line break:
 
  - `secret`: Contains the secret that is used to connect from the agent to Jenkins master.
  - `url`: Contains the complete url to your Jenkins instance, e.g. https://jenkins.yourdomain.tld/
- - `agent_name`: Contains the name for the Jenkins agent, e.g. agent_smath
+ - `agent_name`: Contains the name for the Jenkins agent, e.g. agent_smith
  
 Start the agent with `./start_agent.sh`.
 
