@@ -1,0 +1,17 @@
+version: '3.8'
+services:
+  jenkins-agent:
+    build: .
+    container_name: jenkins-agent
+    group_add:
+      # the group_id returned by `stat -c '%g' /var/run/docker.sock`
+      - ${JENKINS_DOCKER_GROUP}
+    environment:
+      # set maximum heap size to 2048 mb
+      - JAVA_OPTS=-Xmx2048m
+      - JENKINS_AGENT_NAME=${JENKINS_AGENT_NAME}
+      - JENKINS_URL=${JENKINS_URL}
+      - JENKINS_SECRET=${JENKINS_SECRET}
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+
